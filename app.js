@@ -48,17 +48,15 @@ Fonction operation( param1, param2 )
     */
 
 // var val1;
-// var val2;
-var val1;
-var val2; 
+// var val2; 
 
 
-function addition(val1, val2){
-	var resultat;
-	resultat = val1+val2;
-	return resultat;
-};
-addition(val1,val2);
+// function addition(val1, val2){
+// 	var resultat;
+// 	resultat = val1+val2;
+// 	return resultat;
+// };
+// addition(val1,val2);
 
 
 
@@ -66,51 +64,69 @@ addition(val1,val2);
 
 
 
-function multiplication(val1, val2){
-	var resultat;
-	resultat = val1*val2;
-	return resultat;
-};
+// function multiplication(val1, val2){
+// 	var resultat;
+// 	resultat = val1*val2;
+// 	return resultat;
+// };
 
-multiplication(val1,val2);
-
-
-
-function division(val1,val2){
-	var result; 
-	resultat = val1/val2;
-	return resultat;
-
-	// je fait ma division 
-	// SI je divisie par 0 ALORS
-	// renvoi "tune peux pas diviser par 0"
-	// SINON 
-	// jexecute la division
-};
-
-division(val1,val2);
+// multiplication(val1,val2);
 
 
 
-function operation(){
-	val1 = Number(prompt("entrez un chiffre"));
-	val2 = Number(prompt("entrez en un second"));
-	alert("le resultat de l'addition est de : " + " " + addition(val1, val2));
-	alert("le resultat de la multiplication est de : " + " " + multiplication(val1, val2));
-	if (val2 !== 0){
-		alert("le resultat de votre division est de : " + " " + division(val1, val2));
+// function division(val1,val2){
+// 	var result; 
+// 	resultat = val1/val2;
+// 	return resultat;
 
-	}else {
-		alert("elle est ou la poulette 0 ??");
-	}
-};
+// 	// je fait ma division 
+// 	// SI je divisie par 0 ALORS
+// 	// renvoi "tune peux pas diviser par 0"
+// 	// SINON 
+// 	// jexecute la division
+// };
 
-operation();
+// division(val1,val2);
+
+
+
+// function operation(){
+// 	val1 = Number(prompt("entrez un chiffre"));
+// 	val2 = Number(prompt("entrez en un second"));
+// 	alert("le resultat de l'addition est de : " + " " + addition(val1, val2));
+// 	alert("le resultat de la multiplication est de : " + " " + multiplication(val1, val2));
+// 	if (val2 !== 0){
+// 		alert("le resultat de votre division est de : " + " " + division(val1, val2));
+
+// 	}else {
+// 		alert("elle est ou la poulette 0 ??");
+// 	}
+// };
+
+// operation();
 
 
 
 /* ----------------------------------------------------------------------------*/
 
+
+
+// Objet peroquet
+
+//     Faire un objet peroquet avec un constructeur sans arguments
+//     Dans l'objet définissez un attribut memoire que vous initialisez à chaine vide ( "") qui constituera la mémoire du péroquet
+//     Dans l'objet définissez aussi une methode ecoute( phrase ) qui constituera le comportement d'écoute du peroquet, dans cette methode vous lancerez un prompt pour sauvegarderez la phrase dans la memoire.
+//     Dans l'objet définissez enfin une methode repete() qui répetera 3 fois ce qu'il a en mémoire et l'affichera dans la console.
+
+
+
+		function perroquet(){
+			this.memoire = "";
+			this.arg2 = arg2;
+			this.arg3 = arg3;
+		};
+
+		var nom = new Nom();
 
 
 
