@@ -119,14 +119,83 @@ Fonction operation( param1, param2 )
 //     Dans l'objet définissez enfin une methode repete() qui répetera 3 fois ce qu'il a en mémoire et l'affichera dans la console.
 
 
-
-		function perroquet(){
-			this.memoire = "";
-			this.arg2 = arg2;
-			this.arg3 = arg3;
-		};
-
-		var nom = new Nom();
+// function Perroquet(){
+//     this.memoire = "";
 
 
+//     this.ecoute = function(phrase){
+//         this.phrase = phrase;
+//         this.memoire.push(new Perroquet(prompt("Coucou je suis le perroquet dit moi quelque chose")));
 
+//     }
+
+
+// };
+
+
+// var perroquet = new Peroquet();
+// perroquet.ecoute();
+
+
+function Perroquet(){
+    this.memoire = "";
+
+
+    this.ecoute = function(phrase){
+        this.memoire = prompt(phrase);
+    }
+
+    this.repete = function(){
+        for(var i = 0; i < 3; i++){
+            return("<p class='text-center text-uppercase para'>"+  this.memoire() + "</p");
+        }
+    }
+};
+
+var a = new Perroquet();
+a.ecoute("Coucou je suis le perroquet dit moi quelque chose");
+// a.repete();
+
+
+$(document).ready(function(){
+    $('.chat').hide();
+    $('.para').hide();
+    var count = 0;
+
+    $('.clic1').click(function(){
+        count++;
+
+        if(count%1 == 0){
+            $('.chat').show();
+            $('.chat').show("slow");
+            $('.chat').show(3000);
+        }if(count%2 == 0){
+            $('.chat').hide();
+            $('.chat').hide("slow");
+            $('.chat').hide(3000);
+        }
+
+    });
+
+    count=0;
+
+    $('.chat').click(function(){
+        count++;
+
+        // if(count%1 == 0){
+        //     $('#para').show();
+        //     $('#para').show("slow");
+        //     $('#para').show(3000);
+        // } else{
+            $('#para').append(a.repete());
+        // }
+
+
+    });
+
+
+
+
+
+
+});
