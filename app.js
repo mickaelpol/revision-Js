@@ -147,7 +147,8 @@ function Perroquet(){
 
     this.repete = function(){
         for(var i = 0; i < 3; i++){
-            return("<p class='text-center text-uppercase para'>"+  this.memoire() + "</p");
+            $('#para').append("<p class='text-center text-uppercase para'>"+  this.memoire + "</p");
+            console.log(this.memoire);
         }
     }
 };
@@ -167,12 +168,9 @@ $(document).ready(function(){
 
         if(count%1 == 0){
             $('.chat').show();
-            $('.chat').show("slow");
-            $('.chat').show(3000);
+
         }if(count%2 == 0){
             $('.chat').hide();
-            $('.chat').hide("slow");
-            $('.chat').hide(3000);
         }
 
     });
@@ -181,16 +179,7 @@ $(document).ready(function(){
 
     $('.chat').click(function(){
         count++;
-
-        // if(count%1 == 0){
-        //     $('#para').show();
-        //     $('#para').show("slow");
-        //     $('#para').show(3000);
-        // } else{
-            $('#para').append(a.repete());
-        // }
-
-
+        a.repete();
     });
 
 
